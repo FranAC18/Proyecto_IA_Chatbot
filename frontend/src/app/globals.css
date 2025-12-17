@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-primary: #3b82f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-background: #0a0a0a;
+    --color-foreground: #ededed;
+    --color-primary: #60a5fa;
+  }
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FIX: Texto visible en inputs */
+input, textarea {
+  color: oklch(0.141 0.005 285.823) !important; /* gray-900 */
+  background-color: white !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: oklch(0.551 0.027 264.364) !important; /* gray-500 */
+}

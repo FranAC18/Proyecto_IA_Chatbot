@@ -1,0 +1,33 @@
+# FastAPI y servidor
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# Pydantic para validación de datos
+pydantic
+pydantic-settings
+pydantic-extra-types
+
+# Procesamiento de PDF
+pypdf2==3.0.1
+
+# Base de datos vectorial
+faiss-cpu
+
+# Modelos de embeddings
+sentence-transformers==2.2.2
+
+# Drivers de base de datos (opcional)
+pymongo==4.6.0
+sqlalchemy==2.0.23
+
+# Manejo de archivos y formularios
+python-multipart==0.0.6
+aiofiles==23.2.1
+python-dotenv==1.0.0
+
+# NumPy (requerido por muchos paquetes)
+numpy==1.26.2
+
+# Otros útiles
+requests==2.31.0
+httpx==0.25.1
