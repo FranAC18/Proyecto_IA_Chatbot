@@ -41,9 +41,14 @@ venv\Scripts\activate  # Windows
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
+API para el chatbot académico de IA - Windows/Conda
+http://localhost:8000/docs
 ### Frontend
 ```
 npm install
 echo "NEXT_PUBLIC_API_URL=http://localhost:8000" > .env.local
 npm run dev
 ```
+Book AI Assistant
+Chatbot académico para libro de IA
+http://localhost:3000/
