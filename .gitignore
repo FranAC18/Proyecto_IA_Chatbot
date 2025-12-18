@@ -50,3 +50,9 @@ uploads/
 *.env.development.local
 *.env.test.local
 *.env.production.local
+# Archivos especificos de IA y Datos
+faiss_index/
+*.index
+*.pkl
+data/*.json
+*.pdf

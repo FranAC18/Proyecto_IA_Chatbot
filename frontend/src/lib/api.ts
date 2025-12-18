@@ -31,11 +31,12 @@ export async function sendMessage(query: string): Promise<SearchResponse> {
   const response = await api.get<SearchResponse>('/api/v1/search', {
     params: {
       query: query,
-      top_k: 3,
+      top_k: 3,  // <--- AUMENTADO A 5 PARA MEJOR CONTEXTO
     }
   });
   return response.data;
 }
+
 export async function processPDF(): Promise<{ 
   message: string; 
   chunks_created: number;
@@ -64,6 +65,15 @@ export async function checkHealth(): Promise<{
     console.error('Error in checkHealth:', error);
     throw error;
   }
+}
+export async function sendFeedback(messageId: string, query: string, useful: boolean, comment: string = "") {
+  const response = await api.post('/api/v1/feedback', {
+    message_id: messageId,
+    query: query,
+    useful: useful,
+    comment: comment
+  });
+  return response.data;
 }
 
 export default api;

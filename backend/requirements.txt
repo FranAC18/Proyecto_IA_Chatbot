@@ -1,33 +1,34 @@
-# FastAPI y servidor
+# --- FastAPI y Servidor Web ---
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
-
-# Pydantic para validación de datos
-pydantic
-pydantic-settings
-pydantic-extra-types
-
-# Procesamiento de PDF
-pypdf2==3.0.1
-
-# Base de datos vectorial
-faiss-cpu
-
-# Modelos de embeddings
-sentence-transformers==2.2.2
-
-# Drivers de base de datos (opcional)
-pymongo==4.6.0
-sqlalchemy==2.0.23
-
-# Manejo de archivos y formularios
 python-multipart==0.0.6
 aiofiles==23.2.1
 python-dotenv==1.0.0
 
-# NumPy (requerido por muchos paquetes)
+# --- Pydantic (Validación de Datos V2) ---
+pydantic>=2.0.0
+pydantic-settings
+pydantic-extra-types
+
+# --- Procesamiento de PDF ---
+# Usado por PDFProcessor para extraer el contenido del libro
+pypdf2==3.0.1
+
+# --- Inteligencia Artificial y NLP ---
+# Motor de búsqueda vectorial (Semana 3 y 4)
+faiss-cpu
+# Generación de embeddings semánticos
+sentence-transformers==2.2.2
+# Pipeline de extracción de respuestas (QA Extractivo)
+transformers
+# Backend de ejecución para modelos de IA
+torch --index-url https://download.pytorch.org/whl/cpu
+tf-keras
+
+# --- Manipulación de Datos ---
+# Requerido para cálculos matemáticos y vectores
 numpy==1.26.2
 
-# Otros útiles
+# --- Utilidades y Clientes ---
 requests==2.31.0
 httpx==0.25.1
